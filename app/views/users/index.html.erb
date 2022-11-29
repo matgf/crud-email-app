@@ -1,0 +1,15 @@
+<h1>Listing Users</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+
+  <% @users.each do |post| %>
+    <tr>
+      <td><%= post.email %></td>
+      <td>test</td>
+    </tr>
+  <% end %>
+</table>
