@@ -69,10 +69,12 @@ GEM
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
     awesome_print (1.9.2)
+    bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.13.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    byebug (11.1.3)
     capybara (3.38.0)
       addressable
       matrix
@@ -243,7 +245,9 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  bcrypt (~> 3.1.7)
   bootsnap
+  byebug (~> 11.1)
   capybara
   debug
   factory_bot_rails
