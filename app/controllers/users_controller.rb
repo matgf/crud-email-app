@@ -7,9 +7,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      # redirect_to root_url, notice: 'Thank you!'
+      redirect_to root_url, alert: 'user created'
     else
-      render 'index'
+
+      redirect_to root_url, alert: 'Error creating the user. Try again'
     end
   end
 
