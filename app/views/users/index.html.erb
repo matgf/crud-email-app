@@ -2,14 +2,16 @@
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
   </tr>
 
-  <% @users.each do |post| %>
+  <% @users.each do |user| %>
     <tr>
-      <td><%= post.email %></td>
-      <td>test</td>
+      <td><%= user.email %></td>
+      <td><%= link_to 'Edit', edit_user_path(user) %></td>
+      <td><%= link_to 'Send Email', edit_user_path(user) %></td>
     </tr>
   <% end %>
 </table>
