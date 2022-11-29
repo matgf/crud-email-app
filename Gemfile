@@ -75,5 +75,5 @@ group :test do
   gem "webdrivers"
 end
 
-gem "sidekiq", "~> 7.0"
+gem 'sidekiq', '~> 5.2.8'
 gem "byebug", "~> 11.1", :groups => [:development, :test]
