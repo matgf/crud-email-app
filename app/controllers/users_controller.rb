@@ -10,8 +10,6 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       redirect_to root_url, alert: 'user created'
-      #TODO: Change the use of this method
-      #UserMailer.with(user: @user).welcome_email.deliver_later
     else
 
       redirect_to root_url, alert: 'Error creating the user. Try again'
@@ -34,6 +32,10 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def send_email
+    SendEmailWorker.perform_in(1.second, params[:user_id])
   end
 
   private
