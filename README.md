@@ -70,5 +70,5 @@ This will run the server at port 3000 by default.
 ### Starting Sidekiq
 
 ```shell
-bundle exec sidekiq s
+bundle exec sidekiq
 ```
