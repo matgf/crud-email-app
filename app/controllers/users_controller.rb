@@ -10,6 +10,8 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       redirect_to root_url, alert: 'user created'
+      #TODO: Change the use of this method
+      #UserMailer.with(user: @user).welcome_email.deliver_later
     else
 
       redirect_to root_url, alert: 'Error creating the user. Try again'
